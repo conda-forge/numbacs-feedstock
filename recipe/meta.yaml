@@ -1,6 +1,6 @@
-{% set python_min = '3.10' %}
+{% set python_min = "3.10" %}
 {% set name = "numbacs" %}
-{% set version = "0.1.1" %}
+{% set version = "0.1.2" %}
 
 package:
   name: {{ name|lower }}
@@ -8,12 +8,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/numbacs-{{ version }}.tar.gz
-  sha256: e8b84cc10991a160ae476163fd91466144492d651bbca3cd9e8eafc1bcdccb8a
+  sha256: 6f03cd777d26ce145e01994494c370d509d790431c26b7bffcdfd4a7ac88bac6
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
